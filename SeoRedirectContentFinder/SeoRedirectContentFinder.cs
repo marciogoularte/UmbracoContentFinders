@@ -9,7 +9,7 @@ using Umbraco.Web.Routing;
 namespace Codevos.Umbraco.Web.Routing
 {
     /// <summary>
-    /// Adds multiple redirect support, e.g. for updating search engine indexes after site migrations
+    /// Adds HTTP redirect support, e.g. for updating search engine indexes after site migrations.
     /// </summary>
     public class SeoRedirectContentFinder : IContentFinder
     {
