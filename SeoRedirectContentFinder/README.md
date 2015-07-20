@@ -7,11 +7,13 @@ Add the following node to your Web.config <appSettings> section.
 The path will be mapped relative to the website root. IIS virtual folders can be used by starting with a tilde (~) character.
 
 Example:
+```xml
 	<add key="SeoRedirectContentFinder.RedirectFilePath" value="~/seo/SeoRedirect.config" />
+```
 
 2. Create redirect config file
 Create a .config file at the path as specified in step one, using the following structure.
-
+```xml
 	<?xml version="1.0" encoding="utf-8" ?>
 	<seo>
 	 <domain name="www.mydomain.com">
@@ -19,6 +21,7 @@ Create a .config file at the path as specified in step one, using the following 
 	  <redirect from="/contact" to="/get-in-touch" status="301" />
 	 </domain>
 	</seo>
+```
 
 Multiple domain nodes can be added.
 Make sure first testing your permanent (301) redirects without specifying the 'status' attribute.
